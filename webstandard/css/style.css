@@ -92,7 +92,7 @@
 
 /* 타이틀 */
 .tit {position: relative;}
-.tit h2 {text-align: center; font-size: 40px; padding: 5px o; color: #2c94c4; letter-spacing: 2px;}
+.tit h2 {text-align: center; font-size: 40px; padding: 5px 0; color: #2c94c4; letter-spacing: 2px;}
 .tit .btn {
     position: absolute; 
     right: 0; 
