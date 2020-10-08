@@ -11,7 +11,7 @@
 #skip a:focus, #skip a:active {top: 0;}
 
 /* 레이아웃 */
-#wwrap {}
+#wrap {}
 #header {
     height: 325px;  
     /* background-image: url(../img/header_bg.jpg);
