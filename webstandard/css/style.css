@@ -303,8 +303,8 @@
 .tab_menu ul li.active ul li a {color: #333;}
 
 /*  */
-.notice4 {position: relative; border: 1px solid#ccc; margin-top: 15px ;}
-.notice4 h4 {border-bottom:  1px solid #ccc;padding: 8px 10px;}
+.notice4 {position: relative; border: 1px solid#ccc; margin-top: 15px;}
+.notice4 h4 {border-bottom:  1px solid #ccc; padding: 8px 10px;}
 .notice4 h4 em {color: #cf3292;}
 .notice4 ul {padding: 10px;}
 .notice4 li {overflow: hidden; padding-left: 8px ; background: url(../img/dot.gif) no-repeat 0 8px;}
