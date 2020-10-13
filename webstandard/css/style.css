@@ -302,7 +302,7 @@
 .tab_menu ul li.active a {color: #fff;}
 .tab_menu ul li.active ul li a {color: #333;}
 
-/*  */
+/* 최신 공지 사항 */
 .notice4 {position: relative; border: 1px solid#ccc; margin-top: 15px;}
 .notice4 h4 {border-bottom:  1px solid #ccc; padding: 8px 10px;}
 .notice4 h4 em {color: #cf3292;}
