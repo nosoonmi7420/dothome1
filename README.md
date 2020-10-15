@@ -11,4 +11,4 @@ https://nosoonmi7420.github.io/dothome1/photoshop/index.html
 제이쿼리 예제<br>
 find() : <a href="https://nosoonmi7420.github.io/dothome1/jquery/jquery04_find2.html">바로가기</a>
 addClass() : <a href="https://nosoonmi7420.github.io/dothome1/jquery/jquery06_addClass2.html">바로가기</a>
-
+hasClass() : <a href="https://nosoonmi7420.github.io/dothome1/jquery/jquery07_hasClass.html">바로가기</a>
