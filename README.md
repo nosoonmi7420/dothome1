@@ -12,3 +12,4 @@ https://nosoonmi7420.github.io/dothome1/photoshop/index.html
 find() : <a href="https://nosoonmi7420.github.io/dothome1/jquery/jquery04_find2.html">바로가기</a>
 addClass() : <a href="https://nosoonmi7420.github.io/dothome1/jquery/jquery06_addClass2.html">바로가기</a>
 hasClass() : <a href="https://nosoonmi7420.github.io/dothome1/jquery/jquery07_hasClass.html">바로가기</a>
+text()/html() : <a href="https://nosoonmi7420.github.io/dothome1/jquery/jquery08_text.html">바로가기</a>
