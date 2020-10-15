@@ -229,10 +229,10 @@
 /* 로그인 */
 
 /* 팝업 */
-.popup {}
+
 .popup h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
 .popup ul {overflow: hidden;}
-.popup li {float: left; width: 93px; margin-right: 5px; text-align: center;}
+.popup li {float: left; width: 93px; margin-right: 5px; }
 .popup li:last-child {margin-right: 0;}
 .popup li a {width: 93px; height: 83px; line-height: 93px;}
 .popup li a img {width: 100%;}
