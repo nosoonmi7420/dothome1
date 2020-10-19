@@ -30,6 +30,9 @@ img {vertical-align: top; /* 이미지 여백 제거 */}
 /* 폰트 스타일 초기화 */
 em,address {font-style: normal;}
 
+/* 보더 초기화 */
+img,fieldset {border: 0;}
+
 /* IR효과 */
 .ir_pm {
     display: block; overflow: hidden; 
