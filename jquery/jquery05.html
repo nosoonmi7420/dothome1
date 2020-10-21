@@ -8,49 +8,74 @@
 <body>
     <Script>
         //증감연산자//
-        function fun1(){
-            let result,a =100,b =200, c =300;
-            result = a< b ? b++ : --c;
-            document.write(result,"<br>"); //200
-            document.write(b);     //201
-        }
-        fun1();
+        // function fun1(){
+        //     let result,a =100,b =200, c =300;
+        //     result = a< b ? b++ : --c;
+        //     document.write(result,"<br>"); //200
+        //     document.write(b);     //201
+        // }
+        // fun1();
 
-        document.write("<br>");
-        //증감연산자//
-        function fun2(){
-            let hap,j,k,l;
-            j = k = l = 0;
-            hap = ++j + k++ + ++l;
-            document.write(hap); //2
-            document.write(j); //1
-            document.write(k); //1
-            document.write(l); //1
-        }
-        fun2();
+        // document.write("<br>");
+        // //증감연산자//
+        // function fun2(){
+        //     let hap,j,k,l;
+        //     j = k = l = 0;
+        //     hap = ++j + k++ + ++l;
+        //     document.write(hap); //2
+        //     document.write(j); //1
+        //     document.write(k); //1
+        //     document.write(l); //1
+        // }
+        // fun2();
 
         //대입연산자//
-        function fun4(){
-            let i=10, j=10, k=30;
-            i /= j; // i = i / j  //i= 1
-            j -= i; // j = j - 1  //j = 9
-            k %= j; // k = k % 9  //k = 3 
-            document.write(i); 
-            document.write(j); 
-            document.write(k); 
-        }
-        fun4();
+        // function fun4(){
+        //     let i=10, j=10, k=30;
+        //     i /= j; // i = i / j  //i= 1
+        //     j -= i; // j = j - 1  //j = 9
+        //     k %= j; // k = k % 9  //k = 3 
+        //     document.write(i); //1
+        //     document.write(j); //9
+        //     document.write(k); //3
+        // }
+        // fun4();
 
         //반복문 중첩//
-        function fun5(){
-            for( i=1; i<=7; i++){
-                for ( j=1; j<=i; j++){
-                    document.write("*");
-                }
-                document.write("<br>");
-            }
-        }
-        fun5();
+        // function fun5(){
+        //     for( i=1; i<=7; i++){
+        //         for ( j=1; j<=i; j++){
+        //             document.write("*");
+        //         }
+        //         document.write("<br>");
+        //     }
+        // }
+        // fun5();
+        //*
+        // **
+        // ***
+        // ****
+        // *****
+        // ******
+        // *******
+
+        // const arr3 = [100,200,300,400,500,600,700,800,900];
+        // arr3.forEach((element,index,array) => {
+        // document.write(element,"<br>");
+        // document.write(index,"<br>");
+        // document.write(array,"<br>");
+        // });
+
+// const arr3 = [100,200,300,400,500,600,700,800,900];
+// for ( let i in arr3){
+//             document.write(arr3[i]);
+//         }
+//         document.write("<br><br>");
+
+        const arr3 = [100,200,300,400,500,600,700,800,900];
+            for ( let i of arr3){
+                document.write([i]);
+            };
     </Script>
 </body>
 </html>
