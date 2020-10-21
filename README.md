@@ -1,6 +1,7 @@
 # dothome1
 학원에서 쓰는 페이지
 
+https://nosoonmi7420.github.io/dothome1/index.html
 <a href="https://nosoonmi7420.github.io/dothome1/test/test01.html
 
 웹표준 사이트 가이드 기준<br> 
