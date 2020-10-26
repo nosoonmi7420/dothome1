@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 레이아웃</title>
+    <style>
+        * {margin: 0; top: 0;}
+        .container {width: 1200px; margin: 0 auto; background: #e1f5fe;}
+        header {width: 100%; height: 100px; background: #b3e5fc;}
+        aside {width: 30%; height: 900px; background: #81d4fa; float: left;}
+        .article1 {width: 70%; height: 300px; background: #4fc3f7; float: left;}
+        .article2 {width: 70%; height: 300px; background: #29b6f6; float: left;}
+        .article3 {width: 70%; height: 300px; background: #03a9f4; float: left;}
+        footer {width: 100%; height: 100px; background: #039be5; clear: both;}
+
+        /* article {width: 70%; height: 900px;}  
+        article:nth-of-type(1) {width: 70%; height: 300px; background: #4fc3f7; float: left;}
+        article:nth-of-type(2) {width: 70%; height: 300px; background: #29b6f6; float: left;}
+        article:nth-of-type(3) {width: 70%; height: 300px; background: #03a9f4; float: left;} */
+
+        @media (max-width: 1280px){
+            .container {width: 100%;}
+            .article1 {height: 450px;}
+            .article2 {height: 450px;}
+            .article3 {width: 100%;}
+        }
+        @media (max-width: 900px){
+            aside {width: 100%; height: 300px;}
+            .article1 {width: 50%;}
+            .article2 {width: 50%;}
+        }
+        @media (max-width: 480px){
+            .article1 {width: 100%; height: 300px;}
+            .article2 {width: 100%; height: 300px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        
+            <header></header>
+            <aside></aside>
+            <article class="article1"></article>
+            <article class="article2"></article>
+            <article class="article3"></article>
+            <!-- <article></article> -->
+            <footer></footer>
+        </div>
+    </div>
+</body>
+</html>
