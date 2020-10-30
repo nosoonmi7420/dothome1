@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반응형레이아웃</title>
     <style>
-        body {}
+        /* reset */
         * {margin: 0; padding: 0;}
+        /* layout */
+        body {}
        .container {width: 100%; margin: 0 auto;}
-        header {width: 100%; height: 100px; background: #c8e6c9 ;}
-        aside {width: 30%; height: 700px; background: #a5d6a7 ; float: left;}
-        section {width: 40%; height: 700px; background: #81c784 ; float: left;}
-        article {width: 30%; height: 700px; background: #66bb6a ; float: left;}
-        footer {width: 100%; height: 100px; background: #4caf50  ; clear: both;}
+        header {width: 100%; height: 100px; background: #c8e6c9;}
+        aside {width: 30%; height: 700px; background: #a5d6a7; float: left;}
+        section {width: 40%; height: 700px; background: #81c784; float: left;}
+        article {width: 30%; height: 700px; background: #66bb6a; float: left;}
+        footer {width: 100%; height: 100px; background: #4caf50 ; clear: both;}
 
-        
-          @media (max-width: 1280px){
+        /* 화면 너비가 0 ~ 1280px */
+        @media (max-width: 1280px){
             section {width: 70%}
             article {width: 100%; height: 300px;}
         }
 
-       
+         /* 화면 너비가 0 ~ 900px */
         @media (max-width: 900px){
             aside {width: 100%;}
             section {width: 100%}
         }
-
-        
-  
+        /* 화면 너비가 0 ~ 480px */
         @media (max-width: 480px){
-            aside { height: 300px;}
-            section { height: 300px;}
+            aside {height: 300px;}
+            section {height: 300px;}
         }
     </style>
 </head>
@@ -38,11 +38,18 @@
     <div id="wrap">
         <div class="container">
             <header></header>
+            <!-- //header -->
             <aside></aside>
+            <!-- //aside -->
             <section></section>
+            <!-- //section -->
             <article></article>
-           <footer></footer>
+            <!-- //article -->
+            <footer></footer>
+            <!-- //footer -->
         </div>
+    <!-- //container -->
     </div>
+    <!-- //wrap -->
 </body>
 </html>
