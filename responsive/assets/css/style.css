@@ -1,11 +1,12 @@
 /* 레이 아웃 */
 #header {height: 327px; background: url(../img/header_bg.jpg) repeat-x center top;}
+#nav {background-color: #f6fdff;}
 
 /* 컨테이너 */
-.container {width: 1200px; margin: 0 auto; background: rgba(0,0,0,0.3);}
+.container {width: 1200px; margin: 0 auto /* background: rgba(0,0,0,0.3); */;  }  
 
 /* 헤더 */
-.header {overflow: hidden;}
+
 .header .header_menu {text-align: right;}
 .header .header_menu a {
     color: #fff; transition: color 0.3s;
@@ -21,7 +22,7 @@
     letter-spacing: 2px; display: inline-block;
     font-weight: 900;  color: #fff; font-size: 30px;
     padding: 5px 30px; 
-    transition:  box-shadow 0.3s ease-in-out;
+    transition:  all 0.3s ease-in-out;
     background-color: #4aa8d4;
 }
 .header .header_tit h1:hover {
@@ -34,7 +35,7 @@
     font-size: 16px; display: inline-block;
     padding: 10px 20px; margin-top: -7px; 
     background-color: #4a9abf; color: #fff;
-    transition:  box-shadow 0.25s ease-in-out;
+    transition:  all 0.25s ease-in-out;
 }
 .header .header_tit a:hover {
     box-shadow: 0 0 0 5px rgba(75,154,191,0.9) inset,
@@ -87,6 +88,65 @@
         0 0 0 3px rgba(75,154,191,0.9) inset,
         0 0 0 100px rgba(0,0,0,0.1) inset;
 }
+
+
+/* 전체 메뉴 */
+.nav {overflow: hidden; padding: 25px 0;}
+.nav > div {float: left; width: 40%;}
+.nav > div:last-child {width: 20%;}
+.nav > div ol {overflow: hidden;}
+.nav > div li {
+    float: left; width: 50%;
+    position: relative; 
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+.nav > div li:before {
+    content: ''; width: 3px; height: 3px; background-color: #25a2d0 ;
+    border-radius: 50%; position: absolute; left: 0; top: 6px;
+}
+.nav > div:last-child li{ width: 100%;}
+.nav > div h3 {
+    font-size: 18px; color: #25a2d0; 
+    font-weight: bold; margin-bottom: 4px;
+}
+.nav > div li a {
+    position: relative;  
+    transition: all 0.3s ease-out;
+}
+.nav > div li a::after {
+    content: '';
+    width: 0%; height: 1px; background: #25a2d0;
+    position: absolute; bottom: 0; left: 0;
+    transition: all 0.3s ease-out;
+}
+.nav > div li:hover a::after {
+    width: 100%;
+}
+
+/* 타이틀 */
+.tit {position: relative; text-align: center;}
+.tit h2 {
+    font-family: "Nanum Brush Script",cursive; 
+    text-align: center; 
+    font-size: 40px; 
+    padding: 5px 0; color: #0093bd; 
+}
+.tit .btn {
+    position: absolute; right: 0; top: 5PX;
+    width: 55px; height: 55px;
+    line-height: 55PX;
+    color: #fff;  background: #319ebf;
+    font-size: 40px;
+    border-radius: 50%;
+    transition: all 0.25s ease-in-out;
+}
+.tit .btn:hover {
+    box-shadow:
+        0 0 0 3px rgba(75,154,191,0.9) inset,
+        0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+
 
 /* 미디어쿼리 */
 @media (max-width: 1220px){
