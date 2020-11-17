@@ -44,6 +44,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .iframe {position: relative;  width: 100%; padding-bottom: 56%;}
+        .iframe iframe {position: absolute;}
+    </style>
 </head>
 <body>
     <a class="sr-only" href="#content">Skip to main content</a>
@@ -71,7 +75,7 @@
     <div class="bs-header bgs5" id="content">
         <div class="container">
             <h1>PARALLAXEFFECT Reference v1.0 &lt;/doc&gt;</h1>
-            <p><a href="https://nomi742003.dothome.co.kr" target="_blank">nomi742003.dothome.co.kr</a></p>
+            <p><a href="http://nomi742003.dothome.co.kr" target="_blank">nomi742003.dothome.co.kr</a></p>
         </div>
     </div>
     <div class="container bs-docs-container">
@@ -85,32 +89,137 @@
                 </script>
                 </div>
                 <!-- //배너 광고 -->
+
+              
+                
+                </div>
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">클리핑 마스크</h2>
-                    <p class="bs-callout bs-callout-info">클리핑 마스크는 레이어 마스크와 달리 상위 레이어의 이미지를 하위 레이어에 클리핑하여 레이어의 모양으로 잘라낸 것처럼 나타내는 기능입니다.</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/sample-1.jpg">
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/sample02.jpg">
-                            </a>
-                        </div>
-                    </div>
+                    <h2 id="intro1" class="page-header">Parallax - jQuery01</h2>
+                    <p class="bs-callout bs-callout-info">scrollTop을 이용하여 패랠랙스 스크로링 효과를 완성하였습니다.</p>
+                    <p><a class="btn btn-primary btn-lg" href="parallax01-jquery.html" role="button">확인하기</a></p>
+<pre class="line-numbers language-js"><code>$(window).scroll(function(){
+const scrollTop = $(window).scrollTop() + $(window).height()/2;
+$(".scrollTop").text(parseInt(scrollTop));
+
+$(".content-item").each(function(num){
+    $(".s"+(num+1)+"OffsetTop").text( parseInt($(this).offset().top) );
+    // console.log(num+1)
+    if( scrollTop > $(this).offset().top){
+        $(".s"+(num+1)+"OffsetTop").css("color","red");
+        $(this).addClass("show");
+    } else {
+        $(".s"+(num+1)+"OffsetTop").css("color","white");
+        $(this).removeClass("show");
+    }
+});
+});
+</code></pre>
                 </div>
                 <!-- //Intro1 -->
-               
+
+                
+                <!-- figma-->
+                <div class="bs-docs-section">
+                    <h2 id="figma" class="page-header">figma</h2>
+                    <p class="bs-callout bs-callout-info"> </p>
+                    <p><a class="btn btn-primary btn-lg" href="parallax01-jquery.html" role="button">확인하기</a></p>
+                    <div class="iframe">
+                        <iframe style="border: 1px solid rgba (0,0,0,0.1);" src=""></style>
+                     </div>
+                </div>
+                <!-- //figma -->
+
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Parallax - Javascript01</h2>
+                    <p class="bs-callout bs-callout-info">scrollTop을 이용하여 패랠랙스 스크로링 효과를 완성하였습니다. </p>
+                    <p><a class="btn btn-primary btn-lg" href="parallax01-javascript.html" role="button">확인하기</a></p>
+<pre class="line-numbers language-js"><code>window.addEventListener("scroll", function(){
+let pageYOffset = window.pageYOffset;
+    //출력용
+    document.querySelector(".pageYOffset").innerText = parseInt(pageYOffset);
+    document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
+    document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
+    document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
+    document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
+    document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
+    document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
+    document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
+    document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
+    document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
+    // 
+    if( pageYOffset > document.getElementById("section1").offsetTop ){
+        document.querySelector(".s1OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s1OffsetTop").style.color = "white";
+    }
+    if( pageYOffset > document.getElementById("section2").offsetTop ){
+        document.querySelector(".s2OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s2OffsetTop").style.color = "white";
+    }
+    if( pageYOffset > document.getElementById("section3").offsetTop ){
+        document.querySelector(".s3OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s3OffsetTop").style.color = "white";
+    }
+    if( pageYOffset > document.getElementById("section4").offsetTop ){
+        document.querySelector(".s4OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s4OffsetTop").style.color = "white";
+    }
+    if( pageYOffset > document.getElementById("section5").offsetTop ){
+        document.querySelector(".s5OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s5OffsetTop").style.color = "white";
+    }
+    if( pageYOffset > document.getElementById("section6").offsetTop ){
+        document.querySelector(".s6OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s6OffsetTop").style.color = "white";
+    }
+    if( pageYOffset > document.getElementById("section7").offsetTop ){
+        document.querySelector(".s7OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s7OffsetTop").style.color = "white";
+    }
+    if( pageYOffset > document.getElementById("section8").offsetTop ){
+        document.querySelector(".s8OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s8OffsetTop").style.color = "white";
+    }
+    if( pageYOffset > document.getElementById("section9").offsetTop ){
+        document.querySelector(".s9OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s9OffsetTop").style.color = "white";
+    }
+});
+</code></pre>
+                </div>
+                <!-- //Intro2 -->
+
+                <!-- figma-->
+                <div class="bs-docs-section">
+                    <h2 id="figma" class="page-header">figma</h2>
+                    <p class="bs-callout bs-callout-info"> </p>
+                    <p><a class="btn btn-primary btn-lg" href="parallax01-javascript.html" role="button">확인하기</a></p>
+                    <div class="iframe">
+                        <iframe style="border: 1px solid rgba (0,0,0,0.1);" src=""></style>
+                     </div>
+                </div>
+                <!-- //figma -->
+                
             </div>
             <!-- //col-md-9 -->
+
             <!-- //col-md-3 -->
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print" role="complementary">
                     <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">레이어 마스크</a></li>
+                        <li><a href="#intro1">Parallax - jQuery01</a></li>
+                        <li><a href="#intro1">Parallax - Javascript01</a></li>
+                        <li><a href="#intro1">Parallax - figma</a></li>
                     </ul>
                 </div>
             </div>
