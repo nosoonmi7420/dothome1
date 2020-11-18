@@ -11,6 +11,7 @@
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/docs.min.css" rel="stylesheet">
     <link href="../assets/css/prism.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="../assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
@@ -283,7 +284,6 @@
 
                 <style>
                     .timing.bg2 > div {background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);}
-
                     .timing6.show {animation: move 4s 1 step-start;}
                     .timing7.show  {animation: move 4s 1 step-end;}
                     .timing8.show  {animation: move 4s 1 steps(4, start);}
@@ -442,15 +442,15 @@
                     .timing.bg6 {height: 600px;}
                     .timing.bg6 > div {background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);}
                     .timing25.normal {animation: move2 4s 5 ease normal;}
-                    .timing26.reverse {animation: move2 4s 5 ease reverse;}
-                    .timing27.alternate {animation: move2 4s 5 ease alternate;}
-                    .timing28.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;}
+                    .timing25.reverse {animation: move2 4s 5 ease reverse;}
+                    .timing25.alternate {animation: move2 4s 5 ease alternate;}
+                    .timing25.alternate-reverse {animation: move2 4s 5 ease alternate-reverse;}
 
                     @keyframes move2 {
-                        0% {left: 0; top: 0;}
-                        25% {left: calc(100% -120%); top: 0;}
-                        50% {left: calc(100% -120%); top: calc(100% -120%);}
-                        75% {left: 0; top: calc(100% -120%);}
+                        0%   {left: 0; top: 0;}
+                        25%  {left: calc(100% - 120px); top: 0;}
+                        50%  {left: calc(100% - 120px); top: calc(100% - 120px);}
+                        75%  {left: 0; top: calc(100% - 120px);}
                         100% {left: 0; top: 0;}
                     }
                 </style>
@@ -465,31 +465,242 @@
                         <h3><span><em class="sr-only">animation-direction</em></span></h3>
                         <div class="timing bg6">
                            <div class="timing25"><span>timing25</span></div>
-                           <!-- <div class="timing26"><span>timing26</span></div>
-                           <div class="timing27"><span>timing27</span></div>
-                           <div class="timing28"><span>timing28</span></div> -->
                         </div>
                     </div>
                 </div>
                 <!-- //Intro6 -->
+
+                <style>
+                    .timing.bg7 {height: 600px;}
+                    .timing.bg7 > div {background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);}
+                    .timing26.show {animation: move3 3s 1 ease; animation-fill-mode: none;}
+                    .timing27.show {animation: move3 3s 1 ease; animation-fill-mode: forwards;}
+                    .timing28.show {animation: move3 3s 1 ease; animation-fill-mode: backwards;}
+                    .timing29.show {animation: move3 3s 1 ease; animation-fill-mode: both;}
+
+                    @keyframes move3 {
+                        0% {left: 0%;}
+                        100% {left: calc(100% - 120px);}
+                    }
+                </style>
+
                 <!-- Intro7 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro7" class="page-header">timing-function</h2>
+                    <h2 id="intro7" class="page-header">animation-direction
+                        <button type="button" class="btn btn-warning start7">start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span><em class="sr-only">animation-direction</em></span></h3>
+                        <div class="timing bg7">
+                        <div class="timing26"><span>timing26</span></div>
+                        <div class="timing27"><span>timing27</span></div>
+                        <div class="timing28"><span>timing28</span></div>
+                        <div class="timing29"><span>timing29</span></div>
+                        </div>
+                    </div>
                 </div>
                 <!-- //Intro7 -->
-                <!-- Intro7 -->
-                <div class="bs-docs-section">
-                    <h2 id="intro7" class="page-header">timing-function</h2>
-                </div>
-                <!-- //Intro7 -->
+                <style>
+                    .timing.bg8 {height: 600px;}
+                    .timing.bg8 > div {background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);}
+                    .timing30.running {animation: move2 4s 100 ease; animation-play-state: running;}
+                    .timing30.paused {animation: move2 4s 100 ease; animation-play-state: paused;}
+                </style>
+             
                 <!-- Intro8 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro8" class="page-header">timing-function</h2>
+                    <h2 id="intro8" class="page-header">animation-direction
+                        <button type="button" class="btn btn-warning start8-1">running</button>
+                        <button type="button" class="btn btn-warning start8-2">paused</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span><em class="sr-only">animation-direction</em></span></h3>
+                        <div class="timing bg8">
+                            <div class="timing30"><span>timing30</span></div>
+                        </div>
+                    </div>
                 </div>
                 <!-- //Intro8 -->
+                <style>
+                    .timing.bg9 {display: flex; justify-content: space-between; min-height: 400px;}
+                    .timing.bg9 > div {background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);}
+                    .timing.bg9 > div.ani1 {animation: wobble 1s 10 ease;}
+                    .timing.bg9 > div.ani2 {animation: pulse 1s 10 ease;}
+                    .timing.bg9 > div.ani3 {animation: flipOutY 1s 10 ease;}
+                    .timing.bg9 > div.ani4 {animation: fadeOutUpBig 1s 10 ease;}
+                    .timing.bg9 > div.ani5 {animation: bounceOutRight 1s 10 ease;}
+                    .timing.bg9 > div.ani6 {animation: backInUp 1s 10 ease;}
+                    .timing.bg9 > div.ani7 {animation: headShake 1s 10 ease;}
+
+                    @keyframes wobble {
+                        from {
+                            -webkit-transform: translate3d(0, 0, 0);
+                            transform: translate3d(0, 0, 0);
+                        }
+
+                        15% {
+                            -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+                            transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+                        }
+
+                        30% {
+                            -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+                            transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+                        }
+
+                        45% {
+                            -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+                            transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+                        }
+
+                        60% {
+                            -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+                            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+                        }
+
+                        75% {
+                            -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+                            transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+                        }
+
+                        to {
+                            -webkit-transform: translate3d(0, 0, 0);
+                            transform: translate3d(0, 0, 0);
+                        }
+                        }
+                        @keyframes flipOutY {
+                        from {
+                            -webkit-transform: perspective(400px);
+                            transform: perspective(400px);
+                        }
+
+                        30% {
+                            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+                            transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+                            opacity: 1;
+                        }
+
+                        to {
+                            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+                            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+                            opacity: 0;
+                        }
+                        }
+                        @keyframes fadeOutUpBig {
+                        from {
+                            opacity: 1;
+                        }
+
+                        to {
+                            opacity: 0;
+                            -webkit-transform: translate3d(0, -2000px, 0);
+                            transform: translate3d(0, -2000px, 0);
+                        }
+                        }
+                        @keyframes bounceOutRight {
+                        20% {
+                            opacity: 1;
+                            -webkit-transform: translate3d(-20px, 0, 0) scaleX(0.9);
+                            transform: translate3d(-20px, 0, 0) scaleX(0.9);
+                        }
+
+                        to {
+                            opacity: 0;
+                            -webkit-transform: translate3d(2000px, 0, 0) scaleX(2);
+                            transform: translate3d(2000px, 0, 0) scaleX(2);
+                        }
+                        }  
+                        @keyframes backInUp {
+                        0% {
+                            -webkit-transform: translateY(1200px) scale(0.7);
+                            transform: translateY(1200px) scale(0.7);
+                            opacity: 0.7;
+                        }
+
+                        80% {
+                            -webkit-transform: translateY(0px) scale(0.7);
+                            transform: translateY(0px) scale(0.7);
+                            opacity: 0.7;
+                        }
+
+                        100% {
+                            -webkit-transform: scale(1);
+                            transform: scale(1);
+                            opacity: 1;
+                        }
+                        } 
+                        @keyframes headShake {
+                        0% {
+                            -webkit-transform: translateX(0);
+                            transform: translateX(0);
+                        }
+
+                        6.5% {
+                            -webkit-transform: translateX(-6px) rotateY(-9deg);
+                            transform: translateX(-6px) rotateY(-9deg);
+                        }
+
+                        18.5% {
+                            -webkit-transform: translateX(5px) rotateY(7deg);
+                            transform: translateX(5px) rotateY(7deg);
+                        }
+
+                        31.5% {
+                            -webkit-transform: translateX(-3px) rotateY(-5deg);
+                            transform: translateX(-3px) rotateY(-5deg);
+                        }
+
+                        43.5% {
+                            -webkit-transform: translateX(2px) rotateY(3deg);
+                            transform: translateX(2px) rotateY(3deg);
+                        }
+
+                        50% {
+                            -webkit-transform: translateX(0);
+                            transform: translateX(0);
+                        }
+                        }  
+                        @keyframes pulse {
+                        from {
+                            -webkit-transform: scale3d(1, 1, 1);
+                            transform: scale3d(1, 1, 1);
+                        }
+
+                        50% {
+                            -webkit-transform: scale3d(1.05, 1.05, 1.05);
+                            transform: scale3d(1.05, 1.05, 1.05);
+                        }
+
+                        to {
+                            -webkit-transform: scale3d(1, 1, 1);
+                            transform: scale3d(1, 1, 1);
+                        }
+                        }              
+                </style>
+
                 <!-- Intro9 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro9" class="page-header">timing-function</h2>
+                    <h2 id="intro9" class="page-header">Animation.CSS
+                        <button type="button" class="btn btn-warning">ani1</button>
+                        <button type="button" class="btn btn-warning">ani2</button>
+                        <button type="button" class="btn btn-warning">ani3</button>
+                        <button type="button" class="btn btn-warning">ani4</button>
+                        <button type="button" class="btn btn-warning">ani5</button>
+                        <button type="button" class="btn btn-warning">ani6</button>
+                        <button type="button" class="btn btn-warning">ani7</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span><em class="sr-only">Animation.CSS</em></span></h3>
+                        <div class="timing bg9">
+                            <div class="timing31"><span>timing31</span></div>
+                            <div class="timing32"><span>timing32</span></div>
+                            <div class="timing33"><span>timing33</span></div>
+                            <div class="timing34"><span>timing34</span></div>
+                            <div class="timing35"><span>timing35</span></div>
+                            <div class="timing36"><span>timing36</span></div>
+                            <div class="timing37"><span>timing37</span></div>
+                        </div>
+                    </div>
                 </div>
                 <!-- //Intro9 -->
             </div>
@@ -552,20 +763,33 @@
            $(".timing.bg5 > div").addClass("show");
         });
 
-        $("#Intro6 > button").click(function(){
-            $(this).text();
-            
+        $("#intro6 > button").click(function(){
+           let txt = $(this).text();
+            $(".timing25").removeClass("normal reverse alternate alternate-reverse").addClass(txt);
         });
 
-// 
-        $(".stepBtnStart").click(function(e){
-            e.preventDefault();
-            $(".stepbox").removeClass("stop").addClass("start");
+        $(".start7").click(function(){
+           $(".timing.bg7 > div").addClass("show");
         });
-        $(".stepBtnStop").click(function(e){
-            e.preventDefault();
-            $(".stepbox").removeClass("start").addClass("stop");
-        });    
+
+        $("#intro8 > button").click(function(){
+           let txt = $(this).text();
+            $(".timing30").removeClass("running paused").addClass(txt);
+        });
+
+        $("#intro9 > button").click(function(){
+           let txt = $(this).text();
+            $(".timing.bg9 > div").removeClass("ani1 ani2 ani3 ani4 ani5 ani6 ani7").addClass(txt);
+        });
+
+//         $(".stepBtnStart").click(function(e){
+//             e.preventDefault();
+//             $(".stepbox").removeClass("stop").addClass("start");
+//         });
+//         $(".stepBtnStop").click(function(e){
+//             e.preventDefault();
+//             $(".stepbox").removeClass("start").addClass("stop");
+//         });    
       
     </script>
 </body>
