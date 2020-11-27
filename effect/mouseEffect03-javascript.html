@@ -3,55 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mouseEffect02-jquery</title>
+    <title>Mouse Effect03 - javascript</title>
     <style>
-       @font-face {
-            font-family: 'Jal_Onuel';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Onuel.woff') format('woff');
+        @font-face {
+            font-family: 'Cafe24Simplehae';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-        *,*::before, *::after {box-sizing:  border-box; margin: 0; padding: 0;}
+        *, *::before, *::after {box-sizing: border-box; margin: 0; padding: 0; color: #fff;}
         a {text-decoration: none; color: #fff; transition: all 0.2s;}
         a:hover {border-bottom: 1px dashed #fff;}
         img {width: 100%; vertical-align: top;}
         li {list-style: none;}
-
         body {
-            background: #a18cd1 url(img/images03.jpg) no-repeat center center;
+            background: url(img/images12@2.jpg) no-repeat center center;
             background-size: cover;
+            background-color: #959595;
             background-blend-mode:luminosity;
             height: 100vh;
             overflow: hidden;
-            font-size: 30px;
+            font-size: 16px;
             line-height: 1.5;
-            font-family: 'Jal_Onuel';
+            font-family: 'Cafe24Simplehae';
             cursor: none;
             position: relative;
-          
-          
         }
         body::before {
             content: '';
             position: absolute; left: 0; top: 0;
             width: 100%; height: 100vh;
-            background: rgba(8,31,36,0.3);
+            background: rgba(36,8,8,0.7);
         }
-       
-          /* info */
+        /* info */
         .info {
             position: fixed; z-index: 1000;
         }
         .info.left {
             left: 20px; top: 20px;
-            color:#fff;
         }
         .info.right {
             right: 20px; top: 20px;
         }
         .info.bottom {
             right: 20px; bottom: 20px;
-            color:#fff
         }
         .info h1 {
             font-size: 2rem;
@@ -63,6 +58,10 @@
         .info li {
             font-size: 1rem;
             line-height: 1.4;
+        }
+        .info.bottom li.active,
+        .info.bottom li:hover {
+            color: #3DFFC1;
         }
         .info li a {
             color:#fff;
@@ -79,19 +78,19 @@
             background: #fff;
             color: #000;
         }
-
         @media (max-width: 800px){
             .info h1 {display: none;}
         }
-
         /* main */
         .contents {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction:  column;
+            flex-direction: column;
             height: 100vh;
             width: 100%;
+            z-index: 10;
+            position: relative;
         }
         .contents p {
             font-size: 3vw;
@@ -102,110 +101,110 @@
             line-height: 2;
         }
         .contents p em {
-            color:brown ;
-            border-bottom: 2px  dashed brown;
+            color: #3DFFC1;
+            border-bottom: 2px dashed #3DFFC1;
             font-style: normal;
         }
         .cursor {
             position: absolute;
             left: 0; top: 0;
-            width: 10px; height: 10px;
+            width: 20px; height: 20px;
             border-radius: 50%;
             z-index: 1000;
             background:#fff;
             user-select: none;
             pointer-events: none;
             transform: scale(1);
-            transition: transform .9s, 
-            opacity .2s ease-in-out;
+            transition: transform .3s ease-in-out;
+            mix-blend-mode: difference;
         }
         .cursor.active {
-            opacity: .5;
-            transform: scale(0);
+            transform: scale(10);
         }
-        .cursor-follower {
-            position: absolute;
-            left: 0; top: 0;
-            width: 30px; height: 30px;
-            border-radius: 50%;
-            z-index: 1000;
-            background: rgba(255,255,255,0.3);
-            user-select: none;
-            pointer-events: none;
-            transform: scale(1);
-            transition: transform .6s , opacity .2s ease-in-out;
-        }
-        .cursor-follower.active {
-            opacity: .5;
-            transform: scale(0);
-        }
-      
-
     </style>
 </head>
 <body>
     <!-- info -->
     <div class="info left">
-        <h1>MouseEffect02 - jQuery</h1>
-        <p>마우스효과-GSAP</p>
+        <h1>Mouse Effect03 - javascript</h1>
+        <p>마우스 효과 - Blend Effect</p>
     </div>
     <div class="info right">
         <ul>
-            <li><a href="mouseEffect01-jquery.html">1</a><a href="mouseEffect01-javascript.html" >1</a></li>
-            <li><a href="mouseEffect02-jquery.html" class="active">2</a><a href="mouseEffect02-javascript.html">2</a></li>
-            <li><a href="mouseEffect03-jquery.html">3</a><a href="mouseEffect03-javascript.html">3</a></li>
+            <li><a href="mouseEffect01-jquery.html">1</a><a href="mouseEffect01-javascript.html">1</a></li>
+            <li><a href="mouseEffect02-jquery.html">2</a><a href="mouseEffect02-javascript.html">2</a></li>
+            <li><a href="mouseEffect03-jquery.html">3</a><a href="mouseEffect03-javascript.html"  class="active">3</a></li>
             <li><a href="mouseEffect04-jquery.html">4</a><a href="mouseEffect04-javascript.html">4</a></li>
             <li><a href="mouseEffect05-jquery.html">5</a><a href="mouseEffect05-javascript.html">5</a></li>
             <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html">6</a></li>
             <li><a href="mouseEffect07-jquery.html">7</a><a href="mouseEffect07-javascript.html">7</a></li>
             <li><a href="mouseEffect08-jquery.html">8</a><a href="mouseEffect08-javascript.html">8</a></li>
             <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
-    </div>
-
-    <div class="info bottom">
-        <ul>
-            <li>pageX : <span class="pageX">0</span></li>
-            <li>pageY : <span class="pageY">0</span></li>
         </ul>
     </div>
-
-    <!-- //info -->
+    <div class="info bottom">
+        <ul>
+            <li>multiply</li>
+            <li>screen</li>
+            <li>overlay</li>
+            <li>darken</li>
+            <li>lighten</li>
+            <li>color-dodge</li>
+            <li>color-burn</li>
+            <li>hard-light</li>
+            <li>soft-light</li>
+            <li class="active">difference</li>
+            <li>exclusion</li>
+            <li>hue</li>
+            <li>saturation</li>
+            <li>color</li>
+            <li>luminosity</li>
+        </ul>
+    </div>
+    <!-- info -->
     <main>
         <div class="cursor"></div>
-        <div class="cursor-follower"></div>
         <div class="contents">
-            <p>When money speak, the <em>truth</em> keeps silent.</p>
-            <p>돈이 말할 때는 <em>진실</em>은 입을 다문다.</p>
+            <p>Never <em>underestimate</em> your own ignorance.</p>
+            <p>네 자신의 무지를 절대 <em>과소평가</em> 하지 마라</p>
         </div>
     </main>
-
     <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
-       //출력용
-       $(document).mousemove(function(e){
-            // console.log(e)
-            $(".pageX").text(e.pageX);
-            $(".pageY").text(e.pageY);
-       });
+        //선택자
+        const cursor = document.querySelector(".cursor");
+        const contentEm =  document.querySelectorAll(".contents em");
+        const infoLi =  document.querySelectorAll(".info.bottom li");
 
-       //마우스 움직이기
-       $(document).mousemove(function(e){
-            let cursorWidth = $(".cursor").width() / 2;
-            let cursorFWidth = $(".cursor-follower").width() / 2;
-
-            gsap.to(".cursor", {duration: 0.6, left: e.pageX - cursorWidth, top: e.pageY - cursorWidth, ease: "power2.out"});
-            gsap.to(".cursor-follower", {duration: 1.6, left: e.pageX - cursorFWidth, top: e.pageY - cursorFWidth ,ease: "power2.out"});
+        //  움직임효과
+        document.addEventListener("mousemove", function(e){
+            gsap.to(cursor, {duration: 0.3, left: e.pageX, top: e.pageY})
         });
 
-        //마우스 오버효과
-        $(".contents em").hover(function(){
-            $(".cursor").addClass("active");
-            $(".cursor-follower").addClass("active");
-        }, function(){
-            $(".cursor").removeClass("active");
-            $(".cursor-follower").removeClass("active");
+        //오버효과
+        contentEm.forEach(elem => {
+            elem.addEventListener("mouseenter", () => {
+                cursor.classList.add("active");
+            });
+            elem.addEventListener("mouseleave", () => {
+                cursor.classList.remove("active");
+            });
+        });
+
+        //
+        infoLi.forEach(info => {
+            info.addEventListener("click", function() {
+                const text = this.textContent || this.innerHTML;
+                cursor.style.mixBlendMode = text;
+
+                infoLi.forEach(li => {
+                    li.classList.remove("active");
+                    this.classList.add("active");
+                });
+              
+            });
         });
     </script>
 </body>

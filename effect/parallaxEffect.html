@@ -114,20 +114,9 @@ $(".content-item").each(function(num){
             </div>
             <!-- //Intro1 -->
 
-            <!-- figma-->
-            <div class="bs-docs-section">
-                <h2 id="figma" class="page-header">figma</h2>
-                <p class="bs-callout bs-callout-info"> </p>
-                <p><a class="btn btn-primary btn-lg" href="parallax01-jquery.html" role="button">확인하기</a></p>
-                <div class="iframe">
-                    
-                </div>
-            </div>
-            <!-- //figma -->
-
             <!-- Intro2 -->
             <div class="bs-docs-section">
-                <h2 id="intro1" class="page-header">Parallax01</h2>
+                <h2 id="intro1" class="page-header">Parallax01-Javascript</h2>
                 <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트</p>
                 <iframe width="100%" height="600px" src="parallax01-javascript.html" frameborder="0"></iframe>
 <pre class="line-numbers language-js"><code>window.addEventListener("scroll", function(){
@@ -195,20 +184,10 @@ let pageYOffset = window.pageYOffset;
 </code></pre>
             </div>
             <!-- //Intro2 -->
-            <!-- figma-->
-            <div class="bs-docs-section">
-                <h2 id="figma" class="page-header">figma</h2>
-                <p class="bs-callout bs-callout-info"> </p>
-                <p><a class="btn btn-primary btn-lg" href="parallax01-javascript.html" role="button">확인하기</a></p>
-                <div class="iframe">
-                    
-                    </div>
-            </div>
-            <!-- //figma -->
-
+     
             <!-- Intro3 -->
             <div class="bs-docs-section">
-                <h2 id="intro3" class="page-header">Parallax02</h2>
+                <h2 id="intro3" class="page-header">Parallax02-jQuery</h2>
                 <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트</p>
                 <iframe width="100%" height="600px" src="parallax02-jquery.html" frameborder="0"></iframe>
 <pre class="line-numbers language-js"><code>$(window).scroll(function(){
@@ -257,10 +236,10 @@ $(".scrollTop").text(scrollTop);
 </code></pre>
             </div>
             <!-- //Intro3 -->
-
+           
             <!-- Intro4  -->
             <div class="bs-docs-section">
-                <h2 id="intro4" class="page-header">Parallax02</h2>
+                <h2 id="intro4" class="page-header">Parallax02-Javascript</h2>
                 <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트</p>
                 <iframe width="100%" height="600px" src="parallax02-javascript.html" frameborder="0"></iframe>
 <pre class="line-numbers language-js"><code>window.addEventListener("scroll", () => {
@@ -304,17 +283,223 @@ document.querySelectorAll(".content-item").forEach((elem) => {
 </code></pre>
             </div>
             <!-- //Intro4 -->
-
-            <!-- figma-->
+        
+            <!-- Intro5  -->
             <div class="bs-docs-section">
-                <h2 id="figma" class="page-header">figma</h2>
-                <p class="bs-callout bs-callout-info"> </p>
-                <p><a class="btn btn-primary btn-lg" href="parallax02-javascript.html" role="button">확인하기</a></p>
-                <div class="iframe">
-                    
-                </div>
+                <h2 id="intro5" class="page-header">Parallax03-jQuery</h2>
+                <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트-이질감느끼기</p>
+                <iframe width="100%" height="600px" src="parallax03-jquery.html" frameborder="0"></iframe>
+<pre class="line-numbers language-js"><code>let scrollTop = $(window).scrollTop();  
+function scroll(){
+    const newScrollTop = $(window).scrollTop();  //함수밖과 함수안의오차를 이용한 화면변화
+    const different = newScrollTop - scrollTop;
+
+    console.log("scrollTop:"+scrollTop);
+    console.log("newScrollTop:"+newScrollTop);
+    console.log("different:"+different);
+
+    // $(".content-item-imgWrap").css({"transform":"rotate("+ different +"deg)"})
+
+    gsap.to(".content-item-imgWrap", {duration: .3, skewY: different * 0.2, ease: Power1.ease});
+    gsap.to(".content-item-num", {duration: .6, skewY: different * 3, ease: Power1.ease});
+    gsap.to(".content-item-desc", {duration: .6, skewY: different * 0.2, ease: Power4.ease});
+
+    scrollTop = newScrollTop;   //different값이 늘어났다 줄어드는 효과- 초기화(0) 
+    requestAnimationFrame(scroll);
+}
+scroll();    
+</code></pre>
             </div>
-            <!-- //figma -->
+            <!-- //Intro5 -->
+         
+            <!-- Intro6  -->
+            <div class="bs-docs-section">
+                <h2 id="intro6" class="page-header">Parallax03-Javascript</h2>
+                <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트- 이질감느끼기</p>
+                <iframe width="100%" height="600px" src="parallax03-javascript.html" frameborder="0"></iframe>
+<pre class="line-numbers language-js"><code>let pageYOffset = window.pageYOffset;
+const scroll = () => {
+    const newpageYOffset = window.pageYOffset;
+    const different = newpageYOffset - pageYOffset;
+
+    console.log("scrollTop :"+pageYOffset);
+    console.log("newScrollTop :"+ newpageYOffset);
+    console.log("different :"+ different);
+
+    let target = document.querySelectorAll(".content-item-img");
+
+    //target.style.transform = "rotate("+different+"deg)";
+    //forEach
+    // target.forEach(box => {
+    //     box.style.transform  = "rotate("+different+"deg)";
+    // })
+
+    gsap.to(".content-item-imgWrap", {duration: .3, skewY: different * 0.2, ease: Power1.ease});
+    gsap.to(".content-item-num", {duration: .6, skewY: different * 3, ease: Power1.ease});
+    gsap.to(".content-item-desc", {duration: .6, skewY: different * 0.2, ease: Power4.ease});
+
+    pageYOffset = newpageYOffset; //오르쪽값을 왼쪽에 대입
+    requestAnimationFrame(scroll);  //시간설정 할 필요없음
+}
+scroll();   
+</code></pre>
+            </div>
+            <!-- //Intro6 -->
+      
+            <!-- Intro7  -->
+            <div class="bs-docs-section">
+                <h2 id="intro7" class="page-header">Parallax04-jQuery</h2>
+                <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트-글자나타나기</p>
+                <iframe width="100%" height="600px" src="parallax04-jquery.html" frameborder="0"></iframe>
+<pre class="line-numbers language-js"><code>// let text = $("#section1 .content-item-desc").text();
+// let split = text.split(" ").join("</span><span>");
+// split = "<span>" + split + "</span>";
+
+//글씨 쪼개기
+$(".content-item-desc").each(function(){
+    let text = $(this).text();
+    let split = text.split("").join("</span><span aria-hidden='true'>");
+    split = "<span aria-hidden='true'>" + split + "</span>";
+    $(this).html(split).attr("aria-label", text);  
+});
+
+// 나타나기
+$(window).scroll(function(){
+    // //한번에 나오게 하기
+    // $(".content-item").each(function(){
+    //     if( $(window).scrollTop() > $(this).offset().top){
+    //         $(this).find(".content-item-desc").addClass("show");
+    //     } else {
+    //         $(this).find(".content-item-desc").removeClass("show");
+    //     }
+    // });
+
+    //한글자씩 나오게 하기
+    // if( $(window).scrollTop() > $("#section1").offset().top){
+    //     $("#section1 .content-item-desc span").each(function(i){
+    //        setTimeout(() => {
+    //         $("#section1 .content-item-desc span").eq(i).addClass("show");
+    //        }, 50 * (i+1));
+    //     });
+    // }
+
+    //한글자씩 나오게 하기(한번에)
+    $(".content-item").each(function(){
+        if( $(window).scrollTop() > $(this).offset().top){
+
+            gsap.to( $(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y: 0, stagger: 0.05, ease: Power1.ease});
+        } 
+    });
+});
+</code></pre>
+            </div>
+            <!-- //Intro7 -->
+    
+            <!-- Intro8  -->
+            <div class="bs-docs-section">
+                <h2 id="intro8" class="page-header">Parallax04-Javascript</h2>
+                <p class="bs-callout bs-callout-info">패랠랙스 스크롤링 이팩트-글자나타나기</p>
+                <iframe width="100%" height="600px" src="parallax04-javascript.html" frameborder="0"></iframe>
+<pre class="line-numbers language-js"><code>// let text = document.querySelector("#section1 .content-item-desc");
+// let splitText = text.innerText;  
+// let splitWrap = splitText.split("").join("</span><span aria-hidden: 'true'>");
+//     splitWrap = "<span aria-hidden: 'true'>" + splitWrap +  "</span>"
+
+// text.innerHTML = splitWrap;  //문장을 한 글자씩 분리시킴-화면 출력 전
+// text.setAttribute("aria-label", splitText);   
+
+//글씨 쪼개기(한번에,forEach)
+document.querySelectorAll(".content-item-desc").forEach(elem=> {  //elem=querySelectorAll(".content-item-desc")모든글자
+    
+    let splitText = elem.innerText;  
+    let splitWrap = splitText.split("").join("</span><span aria-hidden:'true'>");
+        splitWrap = "<span aria-hidden:'true'>" + splitWrap + "</span>";
+
+        elem.innerHTML = splitWrap;  //text대신elem사용
+        elem.setAttribute("aria-label", splitText); 
+});
+
+//한글자씩 나오게 하기   - 
+window.addEventListener("scroll", () => {
+    let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+
+    if( pageYOffset > document.getElementById("section1").offsetTop){
+        document.querySelectorAll("#section1 .content-item-desc span").forEach((elem, index) =>{
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section2").offsetTop){
+        document.querySelectorAll("#section2 .content-item-desc span").forEach((elem, index) =>{
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section3").offsetTop){
+        document.querySelectorAll("#section3 .content-item-desc span").forEach((elem, index) =>{
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section4").offsetTop){
+        document.querySelectorAll("#section4 .content-item-desc span").forEach((elem, index) =>{
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section5").offsetTop){
+        document.querySelectorAll("#section5 .content-item-desc span").forEach((elem, index) =>{
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section6").offsetTop){
+        document.querySelectorAll("#section6 .content-item-desc span").forEach((elem, index) =>{
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section7").offsetTop){
+        document.querySelectorAll("#section7 .content-item-desc span").forEach((elem, index) =>{
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section8").offsetTop){
+        document.querySelectorAll("#section8 .content-item-desc span").forEach((elem, index) =>{
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if( pageYOffset > document.getElementById("section9").offsetTop){
+        document.querySelectorAll("#section9 .content-item-desc span").forEach((elem, index) =>{
+            setTimeout(() => {
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+});
+</code></pre>
+    </div>
+    <!-- //Intro8 -->
+    <!-- figma -->
+    <div class="bs-docs-section">
+        <h2 id="figma" class="page-header">figma</h2>
+        <p class="bs-callout bs-callout-info">ParallaxEffect의 스크립트를 정리해 놓은것 입니다.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">확인하기</a></p>
+        <div class="iframe">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Frk1SN6G7UOZ08H5ZKVqH6Z%2FParallax%3Fnode-id%3D1%253A3" allowfullscreen></iframe>
+        </div>            
+    </div>
+<!-- //figma -->
                 
             </div>
             <!-- //col-md-12 -->
