@@ -154,15 +154,15 @@
                                 </tr>
                                 <tr>
                                     <td>grid-row-gap</td>
-                                    <td>grid-row-gap는 그리드 아이템 행의 간격을 설정합니다.</td>
+                                    <td>grid-row-gap는 그리드 컬럼 행의 간격을 설정합니다.</td>
                                 </tr>
                                 <tr>
                                     <td>grid-row-start</td>
-                                    <td>grid-row-start는 그리드 아이템 컬럼의 시작 위치를 설정합니다.</td>
+                                    <td>grid-row-start는 그리드  컬럼의 시작 위치를 설정합니다.</td>
                                 </tr>
                                 <tr>
                                     <td>grid-row-end</td>
-                                    <td>grid-row-end는 그리드 아이템 컬럼의 끝 위치를 설정합니다.</td>
+                                    <td>grid-row-end는 그리드  컬럼의 끝 위치를 설정합니다.</td>
                                 </tr>
                                 <tr>
                                     <td>grid-template</td>
@@ -248,8 +248,7 @@
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
                 }
-                .columns1 {
-                }
+                .columns1 {}
                 </style>
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
@@ -292,8 +291,7 @@
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr ;
                 }
-                .columns2 {
-                }
+                .columns2 {}
                 </style>
                   <!-- Intro2 -->
                   <div class="bs-docs-section">
@@ -333,7 +331,202 @@
                         </div>
                     </div>
                 </div>
-                <!-- //Intro1 -->
+                <!-- //Intro2 -->
+
+                <style>
+                .grid3 {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr ;
+                    grid-template-rows: 1fr 1fr 1fr ;
+                }
+                .columns3 {}
+                </style>
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                <h2 id="intro3" class="page-header">grid-column-start</h2>
+                <p class="bs-callout bs-callout-info">
+                    grid-column-start 속성은  컴럼의 시작위치를 정의합니다.
+                </p>
+                <div class="sample">
+                    <h3><span></span><em class="sr-only">grid-column-start</em></h3>
+                    <div class="pmBtn pmBtn3">
+                        <a href="#" class="plus">+</a>
+                        <a href="#" class="minus">-</a>
+                    </div>
+                    <div class="boxWrap">
+                        <div class="gridBox grid3">
+                            <div class="columns active columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                            <div class="columns columns3"></div>
+                        </div>
+                    </div>
+                    <div class="gridChoice gridBtn3">
+                        <a href="#">grid-column-start: auto </a>
+                        <a href="#">grid-column-start: 1 </a>
+                        <a href="#">grid-column-start: 2 </a>
+                        <a href="#">grid-column-start: 3 </a>
+                        <a href="#">grid-column-start: -1</a>
+                        <a href="#">grid-column-start: span 2</a>
+                        <a href="#">grid-column-start: span 3</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- //Intro3 -->
+
+            <style>
+            .grid4 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr ;
+                grid-template-rows: 1fr 1fr 1fr ;
+            }
+            .columns4 {}
+            </style>
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                <h2 id="intro4" class="page-header">grid-column-end</h2>
+                <p class="bs-callout bs-callout-info">
+                    grid-column-end 속성은  컴럼의 마지막위치를 정의합니다.
+                </p>
+                <div class="sample">
+                    <h3><span></span><em class="sr-only">grid-column-end</em></h3>
+                    <div class="pmBtn pmBtn4">
+                        <a href="#" class="plus">+</a>
+                        <a href="#" class="minus">-</a>
+                    </div>
+                    <div class="boxWrap">
+                        <div class="gridBox grid4">
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns columns4"></div>
+                            <div class="columns active columns4"></div>
+                        </div>
+                    </div>
+                    <div class="gridChoice gridBtn4">
+                        <a href="#">grid-column-start: auto </a>
+                        <a href="#">grid-column-start: 1 </a>
+                        <a href="#">grid-column-start: 2 </a>
+                        <a href="#">grid-column-start: 3 </a>
+                        <a href="#">grid-column-start: -1</a>
+                        <a href="#">grid-column-start: span 2</a>
+                        <a href="#">grid-column-start: span 3</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- //Intro4 -->
+
+            <style>
+            .grid5 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr  1fr;
+                grid-template-rows: 1fr 1fr 1fr  1fr;
+            }
+            .columns5 {}
+            </style>
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                <h2 id="intro5" class="page-header">grid-column</h2>
+                <p class="bs-callout bs-callout-info">
+                    grid-column 속성은  컴럼의 위치를 정의합니다.
+                </p>
+                <div class="sample">
+                    <h3><span></span><em class="sr-only">grid-column</em></h3>
+                    <div class="pmBtn pmBtn5">
+                        <a href="#" class="plus">+</a>
+                        <a href="#" class="minus">-</a>
+                    </div>
+                    <div class="boxWrap">
+                        <div class="gridBox grid5">
+                            <div class="columns active columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns columns5"></div>
+                            <div class="columns  columns5"></div>
+                        </div>
+                    </div>
+                    <div class="gridChoice gridBtn5">
+                        <a href="#">grid-column: 1 </a>
+                        <a href="#">grid-column: 1 / 3</a>
+                        <a href="#">grid-column: 1 / 4</a>
+                        <a href="#">grid-column: 1 / 5</a>
+                        <a href="#">grid-column: 2 / 4</a>
+                        <a href="#">grid-column: 2 / 5</a>
+                        <a href="#">grid-column: 3 / 5</a>
+                        <a href="#">grid-column: 4 / 5</a>
+                        <a href="#">grid-column: 2 / -1 </a>
+                        <a href="#">grid-column: 2 / -2 </a>
+                        <a href="#">grid-column: 2 / -3 </a>
+                        <a href="#">grid-column: 1 / span 2 </a>
+                        <a href="#">grid-column: 1 / span 3 </a>
+                        <a href="#">grid-column: 1 / span 4 </a>
+                    </div>
+                </div>
+            </div>
+            <!-- //Intro5 -->
+
+            <style>
+            .grid6 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+            .columns6 {}
+            </style>
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                <h2 id="intro6" class="page-header">grid-gap(gap)</h2>
+                <p class="bs-callout bs-callout-info">
+                    grid-gap(gap) 속성은  컴럼의 간격를 정의합니다.
+                </p>
+                <div class="sample">
+                    <h3><span></span><em class="sr-only">grid-gap(gap)</em></h3>
+                    <div class="pmBtn pmBtn6">
+                        <a href="#" class="plus">+</a>
+                        <a href="#" class="minus">-</a>
+                    </div>
+                    <div class="boxWrap">
+                        <div class="gridBox grid6">
+                            <div class="columns columns6"></div>
+                            <div class="columns columns6"></div>
+                            <div class="columns columns6"></div>
+                            <div class="columns columns6"></div>
+                            <div class="columns columns6"></div>
+                            <div class="columns columns6"></div>
+                        </div>
+                    </div>
+                    <div class="gridChoice gridBtn6">
+                        <a href="#">grid-gap: 10px </a>
+                        <a href="#">grid-gap: 20px</a>
+                        <a href="#">grid-gap: 30px</a>
+                        <a href="#">grid-gap: 10px  20px</a>
+                        <a href="#">grid-gap: 10px  40px</a>
+                        <a href="#">grid-gap: 10px  60px</a>
+                        <a href="#">grid-gap: calc(10px + 1vw)</a>
+                        <a href="#">gap: 10px</a>
+                        <a href="#">gap: 20px</a>
+                        <a href="#">gap: 30px</a>
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- //Intro6 -->
+
 
             </div>
             <!-- //col-md-12 -->
@@ -374,10 +567,14 @@
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
     <script>
+
+        $("a").click(function(e){
+            e.preventDefault();
+        });
+        // 1
         $(".gridBtn1").on("click","a", function(e){
             //클릭한 글씨를 가져와서 grid1 속성으로 추가...
-            e.preventDefault();
-            var attrText = $(this).text();
+           var attrText = $(this).text();
             $(".grid1").attr("style", attrText);
         });
          //버튼
@@ -388,10 +585,9 @@
             $(".grid1 > div:last-child()").remove();
         });
 
-
+        //2
         $(".gridBtn2").on("click","a", function(e){
-            e.preventDefault();
-            var attrText = $(this).text();
+           var attrText = $(this).text();
             $(".grid2").attr("style", attrText);
         });
         //버튼
@@ -400,6 +596,59 @@
         });
         $(".pmBtn2 .minus").on("click",function(){
             $(".grid2 > div:last-child()").remove();
+        });
+
+        //3
+        $(".gridBtn3").on("click","a", function(e){
+            var attrText = $(this).text();
+            $(".grid3 > .columns3").eq(0).attr("style", attrText);
+        });
+        //버튼
+        $(".pmBtn3 .plus").on("click",function(){
+            $(".grid3").append("<div class = 'columns columns3'></div>")
+        });
+        $(".pmBtn3 .minus").on("click",function(){
+            $(".grid3 > div:last-child()").remove();
+        });
+
+
+         //4
+         $(".gridBtn4").on("click","a", function(e){
+            var attrText = $(this).text();
+            $(".grid4 > .columns4").last().attr("style", attrText);
+        });
+        //버튼
+        $(".pmBtn4 .plus").on("click",function(){
+            $(".grid4").append("<div class = 'columns columns4'></div>")
+        });
+        $(".pmBtn4 .minus").on("click",function(){
+            $(".grid4 > div:last-child()").remove();
+        });
+
+        //5
+        $(".gridBtn5").on("click","a", function(e){
+            var attrText = $(this).text();
+            $(".grid5 > .columns5").first().attr("style", attrText);
+        });
+        //버튼
+        $(".pmBtn5 .plus").on("click",function(){
+            $(".grid5").append("<div class = 'columns columns5'></div>")
+        });
+        $(".pmBtn5 .minus").on("click",function(){
+            $(".grid5 > div:last-child()").remove();
+        });
+
+        //6
+        $(".gridBtn6").on("click","a", function(e){
+            var attrText = $(this).text();
+            $(".grid6").attr("style", attrText);
+        });
+        //버튼
+        $(".pmBtn6 .plus").on("click",function(){
+            $(".grid6").append("<div class = 'columns columns6'></div>")
+        });
+        $(".pmBtn6 .minus").on("click",function(){
+            $(".grid6 > div:last-child()").remove();
         });
     </script>
 </body>
